@@ -86,13 +86,17 @@ h1 {
     font-weight: 500;
 }
 
+.table-wrapper {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
 .student-table {
     width: 100%;
     border-collapse: collapse;
-    overflow-x: auto;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
 }
 
 .student-table thead {
@@ -108,34 +112,32 @@ h1 {
     text-align: left;
     font-weight: 600;
     letter-spacing: 0.5px;
-    border: 1px solid #ddd;
+    border: 1px solid #555;
+    white-space: nowrap;
+    background-color: #667eea;
 }
 
-.student-table tbody {
-    overflow-y: auto;
-    display: block;
-    width: 100%;
-}
-
-.student-table tr {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
+.student-table tbody tr {
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #ddd;
 }
 
 .student-table tbody tr:hover {
-    background-color: #f5f5f5;
+    background-color: #f0f0f0;
 }
 
 .student-table tbody tr:nth-child(odd) {
     background-color: #f9f9f9;
 }
 
+.student-table tbody tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
 .student-table td {
     padding: 12px 15px;
     border: 1px solid #ddd;
     color: #333;
-    transition: background-color 0.3s ease;
 }
 
 .blood-group {
