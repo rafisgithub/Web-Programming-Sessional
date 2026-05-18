@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 100vh;
+    overflow: hidden;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0;
+    box-shadow: none;
+    overflow-y: auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: 600;
+    flex-shrink: 0;
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.search-box {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 14px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-box:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 8px rgba(102, 126, 234, 0.3);
+}
+
+.clear-btn {
+    padding: 12px 25px;
+    background-color: #667eea;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.clear-btn:hover {
+    background-color: #764ba2;
+    transform: translateY(-2px);
+}
+
+.clear-btn:active {
+    transform: translateY(0);
+}
+
+.no-results {
+    text-align: center;
+    padding: 30px !important;
+    color: #999;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.student-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.student-table thead {
+    background-color: #667eea;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.student-table th {
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border: 1px solid #ddd;
+}
+
+.student-table tbody {
+    overflow-y: auto;
+    display: block;
+    width: 100%;
+}
+
+.student-table tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.student-table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.student-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.student-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.blood-group {
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 25px;
+    text-align: center;
+    display: inline-block;
+    min-width: 60px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    transition: all 0.3s ease;
+}
+
+.blood-group:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bg-aplus {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+    color: white;
+    border: 2px solid #ff4757;
+}
+
+.bg-bplus {
+    background: linear-gradient(135deg, #4ecdc4 0%, #35a8a0 100%);
+    color: white;
+    border: 2px solid #1e8f84;
+}
+
+.bg-ominus {
+    background: linear-gradient(135deg, #ffd93d 0%, #ffc107 100%);
+    color: #333;
+    border: 2px solid #ffb300;
+}
+
+.bg-oplus {
+    background: linear-gradient(135deg, #95e1d3 0%, #6fd4c2 100%);
+    color: #333;
+    border: 2px solid #38ada9;
+}
+
+.bg-abminus {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    color: #333;
+    border: 2px solid #fd79a8;
+}
+
+.bg-abplus {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: 2px solid #5f3dc4;
+}
+
+.bg-bminus {
+    background: linear-gradient(135deg, #00d2d3 0%, #00b894 100%);
+    color: white;
+    border: 2px solid #00a383;
+}
+
+.cgpa {
+    font-weight: 700;
+    color: #667eea;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .search-container {
+        margin-bottom: 15px;
+    }
+
+    .student-table {
+        font-size: 14px;
+    }
+
+    .student-table th,
+    .student-table td {
+        padding: 10px 8px;
+    }
+
+    .student-table thead {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+        height: 100vh;
+    }
+
+    h1 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .search-box {
+        width: 100%;
+    }
+
+    .clear-btn {
+        width: 100%;
+    }
+
+    .student-table th,
+    .student-table td {
+        padding: 8px 6px;
+        font-size: 11px;
+    }
+}

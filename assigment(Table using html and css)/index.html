@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Information of SU</h1>
+        <div class="search-container">
+            <input 
+                type="text" 
+                id="searchInput" 
+                class="search-box" 
+                placeholder="Search by ID, Name, Blood Group, CGPA, or Email..."
+            >
+            <button class="clear-btn" onclick="clearSearch()">Clear</button>
+        </div>
+        <table class="student-table">
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>University</th>
+                    <th>Blood Group</th>
+                    <th>CGPA</th>
+                    <th>Semester</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CSE2202026150</td>
+                    <td>Rafi Ahmed</td>
+                    <td>Computer Science & Engineering</td>
+                    <td>Sonargaon University</td>
+                    <td class="blood-group bg-aplus">A+</td>
+                    <td class="cgpa">4.00</td>
+                    <td>8th</td>
+                    <td>rafi.ahmed@sonargaon.edu.bd</td>
+                    <td>+880 1712-345678</td>
+                </tr>
+                <tr>
+                    <td>CSE2202026155</td>
+                    <td>Md Mamun Haque</td>
+                    <td>Computer Science & Engineering</td>
+                    <td>Sonargaon University</td>
+                    <td class="blood-group bg-aplus">A+</td>
+                    <td class="cgpa">3.80</td>
+                    <td>8th</td>
+                    <td>mamun.haque@sonargaon.edu.bd</td>
+                    <td>+880 1308-197471</td>
+                </tr>
+                <tr>
+                    <td>CSE2202026156</td>
+                    <td>MD Mashrur Rahman Mahin</td>
+                    <td>Computer Science & Engineering</td>
+                    <td>Sonargaon University</td>
+                    <td class="blood-group bg-bplus">B+</td>
+                    <td class="cgpa">3.95</td>
+                    <td>8th</td>
+                    <td>mashrur.mahin@sonargaon.edu.bd</td>
+                    <td>+880 1973-731871</td>
+                </tr>
+                <tr>
+                    <td>CSE2202026157</td>
+                    <td>MD Nayeem</td>
+                    <td>Computer Science & Engineering</td>
+                    <td>Sonargaon University</td>
+                    <td class="blood-group bg-abminus">AB-</td>
+                    <td class="cgpa">3.70</td>
+                    <td>8th</td>
+                    <td>nayeem@sonargaon.edu.bd</td>
+                    <td>+880 1996-333853</td>
+                </tr>
+                <tr>
+                    <td>CSE2202026158</td>
+                    <td>Palash Hossain</td>
+                    <td>Computer Science & Engineering</td>
+                    <td>Sonargaon University</td>
+                    <td class="blood-group bg-aplus">A+</td>
+                    <td class="cgpa">3.88</td>
+                    <td>8th</td>
+                    <td>palash.hossain@sonargaon.edu.bd</td>
+                    <td>+880 1748-828541</td>
+                </tr>
+                <tr>
+                    <td>CSE2202026159</td>
+                    <td>Tasnim Ahmed</td>
+                    <td>Computer Science & Engineering</td>
+                    <td>Sonargaon University</td>
+                    <td class="blood-group bg-bplus">B+</td>
+                    <td class="cgpa">4.00</td>
+                    <td>8th</td>
+                    <td>tasnim.ahmed@sonargaon.edu.bd</td>
+                    <td>+880 1616-109077</td>
+                </tr>
+                <tr>
+                    <td>CSE2202026160</td>
+                    <td>Abu Sayed</td>
+                    <td>Computer Science & Engineering</td>
+                    <td>Sonargaon University</td>
+                    <td class="blood-group bg-bplus">B+</td>
+                    <td class="cgpa">3.82</td>
+                    <td>8th</td>
+                    <td>abu.sayed@sonargaon.edu.bd</td>
+                    <td>+880 1760-232711</td>
+                </tr>
+                <tr>
+                    <td>CSE2202026161</td>
+                    <td>Azmir Uddin Abdulla</td>
+                    <td>Computer Science & Engineering</td>
+                    <td>Sonargaon University</td>
+                    <td class="blood-group bg-aplus">A+</td>
+                    <td class="cgpa">3.90</td>
+                    <td>8th</td>
+                    <td>azmir.abdulla@sonargaon.edu.bd</td>
+                    <td>+880 1829-317005</td>
+                </tr>
+                <tr>
+                    <td>CSE2202026162</td>
+                    <td>Dilrub Khatun</td>
+                    <td>Computer Science & Engineering</td>
+                    <td>Sonargaon University</td>
+                    <td class="blood-group bg-oplus">O+</td>
+                    <td class="cgpa">3.75</td>
+                    <td>8th</td>
+                    <td>dilrub.khatun@sonargaon.edu.bd</td>
+                    <td>+880 1732-062972</td>
+                </tr>
+                <tr>
+                    <td>CSE2202026163</td>
+                    <td>Estihak Khan</td>
+                    <td>Computer Science & Engineering</td>
+                    <td>Sonargaon University</td>
+                    <td class="blood-group bg-aplus">A+</td>
+                    <td class="cgpa">3.85</td>
+                    <td>8th</td>
+                    <td>estihak.khan@sonargaon.edu.bd</td>
+                    <td>+880 1863-700230</td>
+                </tr>
+                <tr>
+                    <td>CSE2202026164</td>
+                    <td>Fahim Ahmed</td>
+                    <td>Computer Science & Engineering</td>
+                    <td>Sonargaon University</td>
+                    <td class="blood-group bg-bplus">B+</td>
+                    <td class="cgpa">3.92</td>
+                    <td>8th</td>
+                    <td>fahim.ahmed@sonargaon.edu.bd</td>
+                    <td>+880 1601-103952</td>
+                </tr>
+                <tr>
+                    <td>CSE2202026165</td>
+                    <td>Farhad Hossain Evan</td>
+                    <td>Computer Science & Engineering</td>
+                    <td>Sonargaon University</td>
+                    <td class="blood-group bg-bminus">B-</td>
+                    <td class="cgpa">3.78</td>
+                    <td>8th</td>
+                    <td>farhad.evan@sonargaon.edu.bd</td>
+                    <td>+880 1639-194002</td>
+                </tr>
+
+                                <tr>
+                    <td>CSE2202026151</td>
+                    <td>Faisal Khan</td>
+                    <td>Computer Science & Engineering</td>
+                    <td>Sonargaon University</td>
+                    <td class="blood-group bg-oplus">O+</td>
+                    <td class="cgpa">3.85</td>
+                    <td>8th</td>
+                    <td>faisal.khan@sonargaon.edu.bd</td>
+                    <td>+880 1734-567890</td>
+                </tr>
+                <tr>
+                    <td>CSE2202026152</td>
+                    <td>Zainab Begum</td>
+                    <td>Computer Science & Engineering</td>
+                    <td>Sonargaon University</td>
+                    <td class="blood-group bg-abplus">AB+</td>
+                    <td class="cgpa">3.92</td>
+                    <td>8th</td>
+                    <td>zainab.begum@sonargaon.edu.bd</td>
+                    <td>+880 1656-789012</td>
+                </tr>
+                <tr>
+                    <td>CSE2202026153</td>
+                    <td>Ahmed Hassan</td>
+                    <td>Computer Science & Engineering</td>
+                    <td>Sonargaon University</td>
+                    <td class="blood-group bg-bminus">B-</td>
+                    <td class="cgpa">3.75</td>
+                    <td>8th</td>
+                    <td>ahmed.hassan@sonargaon.edu.bd</td>
+                    <td>+880 1578-901234</td>
+                </tr>
+                <tr>
+                    <td>CSE2202026154</td>
+                    <td>Nida Akter</td>
+                    <td>Computer Science & Engineering</td>
+                    <td>Sonargaon University</td>
+                    <td class="blood-group bg-bplus">B+</td>
+                    <td class="cgpa">4.00</td>
+                    <td>8th</td>
+                    <td>nida.akter@sonargaon.edu.bd</td>
+                    <td>+880 1690-234567</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('searchInput');
+        const table = document.querySelector('.student-table');
+        const rows = table.querySelectorAll('tbody tr');
+
+        // Add event listener to search input
+        searchInput.addEventListener('keyup', function() {
+            const searchTerm = this.value.toLowerCase();
+            let visibleCount = 0;
+
+            rows.forEach(row => {
+                const text = row.innerText.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    row.style.display = '';
+                    visibleCount++;
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+
+            // Show "no results" message if needed
+            showNoResultsMessage(visibleCount);
+        });
+
+        function clearSearch() {
+            searchInput.value = '';
+            rows.forEach(row => {
+                row.style.display = '';
+            });
+            removeNoResultsMessage();
+        }
+
+        function showNoResultsMessage(visibleCount) {
+            removeNoResultsMessage();
+            if (visibleCount === 0) {
+                const noResultsRow = document.createElement('tr');
+                noResultsRow.id = 'no-results';
+                noResultsRow.innerHTML = '<td colspan="9" class="no-results">No students found. Try a different search.</td>';
+                table.querySelector('tbody').appendChild(noResultsRow);
+            }
+        }
+
+        function removeNoResultsMessage() {
+            const noResultsRow = document.getElementById('no-results');
+            if (noResultsRow) {
+                noResultsRow.remove();
+            }
+        }
+    </script>
+</body>
+</html>
